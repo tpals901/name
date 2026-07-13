@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김가현 | 온라인 명함</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .rise {
+      opacity: 0;
+      animation: rise 0.75s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.12s; }
+    .delay-2 { animation-delay: 0.24s; }
+    .delay-3 { animation-delay: 0.36s; }
+  </style>
+</head>
+<body class="min-h-screen bg-[#efe4d3] text-[#2d261f] antialiased">
+  <main class="mx-auto flex min-h-screen w-full max-w-md items-center px-5 py-8 sm:max-w-lg">
+    <section class="rise w-full overflow-hidden rounded-[28px] border border-[#d9c7ad] bg-[#f8f1e7] shadow-[0_24px_70px_rgba(95,72,43,0.22)]">
+      <div class="grid min-h-[620px] grid-cols-[42%_58%] sm:min-h-[680px]">
+        <aside class="relative overflow-hidden bg-[#d9c7ad]">
+          <img
+            src="./profile-kim-gahyun.png"
+            alt="정장을 입은 한국 여성의 AI 생성 프로필 사진"
+            class="h-full w-full object-cover object-center"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#2d261f]/18 via-transparent to-transparent"></div>
+        </aside>
+
+        <article class="relative flex flex-col justify-between px-5 py-6 sm:px-7 sm:py-8">
+          <div class="rise delay-1">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a7a50]">Digital Card</p>
+            <div class="mt-5 h-px w-14 bg-[#b99669]"></div>
+          </div>
+
+          <div class="rise delay-2 space-y-4">
+            <div>
+              <p class="text-sm font-medium text-[#9a7a50]">온라인 명함</p>
+              <h1 class="mt-2 text-4xl font-semibold text-[#2b241d]">김가현</h1>
+            </div>
+            <p class="max-w-[16rem] text-sm leading-7 text-[#6f5a43]">
+              언제든지 연락 주시면 친절히 안내 도와드리겠습니다.
+            </p>
+          </div>
+
+          <div class="rise delay-3 space-y-3">
+            <a
+              href="tel:01012341234"
+              class="block rounded-2xl border border-[#d8c2a3] bg-white/55 px-4 py-3 shadow-sm transition hover:bg-white"
+            >
+              <span class="block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#9a7a50]">Phone</span>
+              <span class="mt-1 block text-sm font-semibold text-[#2d261f]">010.1234.1234</span>
+            </a>
+
+            <a
+              href="mailto:abc1234@naver.com"
+              class="block rounded-2xl border border-[#d8c2a3] bg-white/55 px-4 py-3 shadow-sm transition hover:bg-white"
+            >
+              <span class="block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#9a7a50]">Email</span>
+              <span class="mt-1 block break-all text-sm font-semibold text-[#2d261f]">abc1234@naver.com</span>
+            </a>
+
+            <a
+              href="mailto:abc1234@naver.com"
+              class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#2d261f] px-5 py-3 text-sm font-semibold text-[#f8f1e7] shadow-[0_14px_30px_rgba(45,38,31,0.22)] transition hover:bg-[#4a3a2a]"
+            >
+              메일 보내기
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
